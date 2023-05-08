@@ -20,10 +20,10 @@ import { Preloader } from "../Preloader/Preloader";
 
 export function Cart(): JSX.Element {
   const dispatch = useAppDispatch();
-  const storageData = JSON.parse(localStorage.getItem('cart') as string) as { items: ICartItem[] };
+  // const storageData = JSON.parse(localStorage.getItem('cart') as string) as { items: ICartItem[] };
   const stateItems = useAppSelector(selectCartItems);
   const orderState = useAppSelector(selectOrederState);
-  const items = storageData ? storageData.items : stateItems;
+  const items = stateItems;
   const orderLoading = useAppSelector(selectOrderLoading);
   const orderError = useAppSelector(selectOrderError);
   const total = items.reduce((prev, cur) => prev + cur.total, 0);

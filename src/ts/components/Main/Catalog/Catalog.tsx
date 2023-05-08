@@ -69,7 +69,7 @@ export function Catalog({ children }: { children: ReactNode }): JSX.Element {
         {
           (!catalogItemsError && items.length !== 0)
           &&
-          items.map((el: ICardItem) => <Card key={nanoid()} {...el} classname='catalog-item-card' />)
+          items.map((el: ICardItem) => <Card key={el.id} {...el} classname='catalog-item-card' />)
         }
       </CardList>
       {
