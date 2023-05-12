@@ -20,7 +20,6 @@ import { Preloader } from "../Preloader/Preloader";
 
 export function Cart(): JSX.Element {
   const dispatch = useAppDispatch();
-  // const storageData = JSON.parse(localStorage.getItem('cart') as string) as { items: ICartItem[] };
   const stateItems = useAppSelector(selectCartItems);
   const orderState = useAppSelector(selectOrederState);
   const items = stateItems;

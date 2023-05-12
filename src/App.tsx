@@ -8,7 +8,7 @@ import { CatalogSearch } from './ts/components/Pages/CatalogSearch/CatalogSearch
 import { Error404 } from './ts/components/Pages/Error404/Error404';
 import { CatalogItem } from './ts/components/Pages/CatalogItem/CatalogItem';
 import { Cart } from './ts/components/Main/Cart/Cart';
-
+  
 function App() {
   return (
     <Routes>

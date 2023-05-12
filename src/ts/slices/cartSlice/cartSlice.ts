@@ -1,16 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TRootState } from '../../store';
 import { ICartItem, ICartState } from './interfaces';
-import { fetchOrder } from '../asyncThunkCreator/index'
+import { fetchOrder } from '../asyncThunkCreator/index';
+import { cartSTORAGE } from './CartStorage';
 
-const initCartStateData = (): ICartState => {
-  return localStorage.getItem('cart')
-    ? JSON.parse(localStorage.getItem('cart') as string)
-    : { items: [] }
-}
 
 const initialState: ICartState = {
-  items: initCartStateData().items,
+  items: cartSTORAGE,
   loading: false,
   error: null,
   orderState: false,
